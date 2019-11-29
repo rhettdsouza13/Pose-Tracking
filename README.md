@@ -1,14 +1,14 @@
-## pytorch-openpose
+## pytorch-openpose - CV IN PROGRESS
 
 pytorch implementation of [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) including **Body and Hand Pose Estimation**, and the pytorch model is directly converted from [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) caffemodel by [caffemodel2pytorch](https://github.com/vadimkantorov/caffemodel2pytorch). You could implement face keypoint detection in the same way if you are interested in. Pay attention to that the face keypoint detector was trained using the procedure described in [Simon et al. 2017] for hands.
 
 openpose detects hand by the result of body pose estimation, please refer to the code of [handDetector.cpp](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/src/openpose/hand/handDetector.cpp).
 In the paper, it states as:
 ```
-This is an important detail: to use the keypoint detector in any practical situation, 
-we need a way to generate this bounding box. 
-We directly use the body pose estimation models from [29] and [4], 
-and use the wrist and elbow position to approximate the hand location, 
+This is an important detail: to use the keypoint detector in any practical situation,
+we need a way to generate this bounding box.
+We directly use the body pose estimation models from [29] and [4],
+and use the wrist and elbow position to approximate the hand location,
 assuming the hand extends 0.15 times the length of the forearm in the same direction.
 ```
 
